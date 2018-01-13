@@ -15,21 +15,22 @@
 
 
 
-<meta name="description" content="很多人在利用hexo搭建自己的个人博客，这个框架简单易用，而且非常简洁。 前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主题里的），将post_asset_">
+<meta name="description" content="很多人在利用hexo搭建自己的个人博客，因为它非常简洁实用（据说是一个台湾在校生搞出来的，不说了，都是泪）。前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主">
 <meta name="keywords" content="hexo完美插入图片">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo解决插入图片问题">
 <meta property="og:url" content="http://yoursite.com/2018/01/13/插入图片-1/index.html">
 <meta property="og:site_name" content="Weclome">
-<meta property="og:description" content="很多人在利用hexo搭建自己的个人博客，这个框架简单易用，而且非常简洁。 前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主题里的），将post_asset_">
+<meta property="og:description" content="很多人在利用hexo搭建自己的个人博客，因为它非常简洁实用（据说是一个台湾在校生搞出来的，不说了，都是泪）。前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://yoursite.com/2018/01/13/插入图片-1/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/13/插入图片-1/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/13/插入图片-1/3.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/13/插入图片-1/timg.jpg">
-<meta property="og:updated_time" content="2018-01-13T09:21:05.706Z">
+<meta property="og:updated_time" content="2018-01-13T09:53:03.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo解决插入图片问题">
-<meta name="twitter:description" content="很多人在利用hexo搭建自己的个人博客，这个框架简单易用，而且非常简洁。 前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主题里的），将post_asset_">
+<meta name="twitter:description" content="很多人在利用hexo搭建自己的个人博客，因为它非常简洁实用（据说是一个台湾在校生搞出来的，不说了，都是泪）。前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。    1、配置_config.yml（注意这个文件不是主">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/13/插入图片-1/1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -290,8 +291,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <pre><code>很多人在利用hexo搭建自己的个人博客，这个框架简单易用，而且非常简洁。
-</code></pre><p>前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。<br>    1、配置_config.yml（注意这个文件不是主题里的），将post_asset_folder参数改为true<br>    <img src="/2018/01/13/插入图片-1/1.png"><br>    2、安装插件，打开Git bash,输入<br>    npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> – save<br>    插件安装成功后，新建一个博文“hexo new 插入图片”,这样的新建的好处是hexo会自动生成一个文件夹存放图片<br>    <img src="/2018/01/13/插入图片-1/2.png"><br>    3、引入图片，使用下列标签<br>     <br>     <br>     <br>     我们测试一下，放一张大雄的图片<br>     <img src="/2018/01/13/插入图片-1/timg.jpg" title="[大雄]"><br>    4、查看，在Git bash中输入hexo g、hexo d、hexo s在本地查看一下是否成功</p>
+        <p>很多人在利用hexo搭建自己的个人博客，因为它非常简洁实用（据说是一个台湾在校生搞出来的，不说了，都是泪）。前不久我自己也搭建了一个，发布博文一切正常，但是在博文中插入图片时遇到了一些问题。很奇葩就是首页能正常显示图片，但是点开正文显示不了。最后经过查略资料，发现一种方法，能够完美解决hexo本地插入图片的问题。好了，废话不多说直接来干货。<br>    1、配置_config.yml（注意这个文件不是主题里面的），将post_asset_folder参数改为true，如下：<br>    <img src="/2018/01/13/插入图片-1/1.png"><br>    2、安装插件，打开Git bash,输入<br>    npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> – save<br>    插件安装成功后，新建一个博文，在Git bash中输入“hexo new 插入图片”,这样的新建的好处是hexo会自动生成一个文件夹存放图片，如下图：<br>    <img src="/2018/01/13/插入图片-1/2.png"><br>    3、引入图片，使用下列标签<br>     <img src="/2018/01/13/插入图片-1/3.png" title="[title]"><br>     我们测试一下，放一张大雄的图片<br>     <img src="/2018/01/13/插入图片-1/timg.jpg" title="[大雄]"><br>    4、查看，在Git bash中输入hexo g、hexo d，由此插入图片就完美解决了。<br>    ps:参考：<a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=11&amp;ved=0ahUKEwjjwLuW0tTYAhXFipQKHTq8CeAQFghVMAo&amp;url=%68%74%74%70%3a%2f%2f%62%6c%6f%67%2e%63%73%64%6e%2e%6e%65%74%2f%75%30%31%30%38%32%38%37%31%38%2f%61%72%74%69%63%6c%65%2f%64%65%74%61%69%6c%73%2f%35%35%35%30%35%36%33%31&amp;usg=AOvVaw0ZHIxSwB-mMBFFnRh8G5DH" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=11&amp;ved=0ahUKEwjjwLuW0tTYAhXFipQKHTq8CeAQFghVMAo&amp;url=%68%74%74%70%3a%2f%2f%62%6c%6f%67%2e%63%73%64%6e%2e%6e%65%74%2f%75%30%31%30%38%32%38%37%31%38%2f%61%72%74%69%63%6c%65%2f%64%65%74%61%69%6c%73%2f%35%35%35%30%35%36%33%31&amp;usg=AOvVaw0ZHIxSwB-mMBFFnRh8G5DH</a></p>
 
       
     </div>
@@ -303,7 +303,7 @@
         <p><span>Title:</span><a href="/2018/01/13/插入图片-1/">hexo解决插入图片问题</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Jack Yang</a></p>
         <p><span>Created:</span>2018-01-13, 16:37:57</p>
-        <p><span>Updated:</span>2018-01-13, 17:21:05</p>
+        <p><span>Updated:</span>2018-01-13, 17:53:03</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2018/01/13/插入图片-1/" title="hexo解决插入图片问题">http://yoursite.com/2018/01/13/插入图片-1/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2018/01/13/插入图片-1/　　By Jack Yang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
