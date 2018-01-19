@@ -28,9 +28,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/01/19/Spring的Ioc底层原理/3.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/19/Spring的Ioc底层原理/4.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/19/Spring的Ioc底层原理/7.png">
-<meta property="og:image" content="http://yoursite.com/2018/01/19/Spring的Ioc底层原理/5.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/01/19/Spring的Ioc底层原理/6.png">
-<meta property="og:updated_time" content="2018-01-19T15:02:42.565Z">
+<meta property="og:updated_time" content="2018-01-19T15:05:50.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring的IoC底层原理">
 <meta name="twitter:description" content="对于学习Javaweb的同学来说，Spring（版本为4）框架（更详细的内容请百度或者谷歌）是绕不过去的一个话题，作为一款开源的轻量级的框架，Spring一经推出，就受到许多程序猿的青睐，我们平时的一些课程虽然也涉及到了，老师也讲解过，但鄙人我只是记住了一些简单的概念（我知道我笨，但请不要说出来哈哈），所以便自己找资料想理解一下。今天主要有以下任务。1、理解两个核心特征    1.1 aop:面向">
@@ -294,9 +292,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>对于学习Javaweb的同学来说，Spring（版本为4）框架（更详细的内容请百度或者谷歌）是绕不过去的一个话题，作为一款开源的轻量级的框架，Spring一经推出，就受到许多程序猿的青睐，我们平时的一些课程虽然也涉及到了，老师也讲解过，但鄙人我只是记住了一些简单的概念（我知道我笨，但请不要说出来哈哈），所以便自己找资料想理解一下。今天主要有以下任务。<br>1、理解两个核心特征<br>    1.1 aop:面向切面编程，扩展功能不是修改源代码实现。<br>    1.2 IoC:控制反转，例如：在一个类里面有一个方法（非静态），调用类中的方法，常规方法需要创建类的对象，使用对象调用方法，创建对象的过程，需要new出来对象，但是IoC是交给Spring配置创建对象。（简言之，创建对象是交给Spring配置来创建对象）。<br>2、IoC操作两个部分<br>    1.1 IoC的配置文件方式<br>    1.2 IoC的注解方式<br>3、IoC底层原理需要用到的技术<br>    3.1 xml配置文件<br>    3.2 dom4j解析xml<br>    3.3 工厂设计模式<br>    3.4 反射<br>    3.5 实现原理（图）<br>    <img src="/2018/01/19/Spring的Ioc底层原理/ioc过程操作1.png"><br>    <img src="/2018/01/19/Spring的Ioc底层原理/2.png"><br>4、IoC入门案例<br>    4.1 导入jar包，我这里为大家备好了<a href="https://pan.baidu.com/s/1eTWRBDg几个基本jar包，直接复制即可。如下图：" target="_blank" rel="noopener">https://pan.baidu.com/s/1eTWRBDg几个基本jar包，直接复制即可。如下图：</a><br>    <img src="/2018/01/19/Spring的Ioc底层原理/3.png"><br>    <img src="/2018/01/19/Spring的Ioc底层原理/4.png"><br>    4.2 创建类，在类里面创建方法<br>    <img src="/2018/01/19/Spring的Ioc底层原理/7.png"><br>    4.3 创建spring配置文件<br>    在src下新建bean1.xml（spring中xml不固定，建议放在src下）,并引入约束，只使用其中一部分，具体看图<br>    <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="
-             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"><br>        <bean id="foo" class="x.y.Foo"><br>             <meta key="cacheName" value="foo"><br>             <property name="name" value="Rick"><br>         </property></bean><br>    </beans><br>    如下图<br>    <img src="/2018/01/19/Spring的Ioc底层原理/5.jpg"><br>    4.4 测试代码，如下图：<br>    <img src="/2018/01/19/Spring的Ioc底层原理/6.png"><br>    到此，IoC入门案例就写好了。从图中控制台可以看出，类中的方法路径已经出现，方法也已经执行。</p>
+        <p>对于学习Javaweb的同学来说，Spring（版本为4）框架（更详细的内容请百度或者谷歌）是绕不过去的一个话题，作为一款开源的轻量级的框架，Spring一经推出，就受到许多程序猿的青睐，我们平时的一些课程虽然也涉及到了，老师也讲解过，但鄙人我只是记住了一些简单的概念（我知道我笨，但请不要说出来哈哈），所以便自己找资料想理解一下。今天主要有以下任务。<br>1、理解两个核心特征<br>    1.1 aop:面向切面编程，扩展功能不是修改源代码实现。<br>    1.2 IoC:控制反转，例如：在一个类里面有一个方法（非静态），调用类中的方法，常规方法需要创建类的对象，使用对象调用方法，创建对象的过程，需要new出来对象，但是IoC是交给Spring配置创建对象。（简言之，创建对象是交给Spring配置来创建对象）。<br>2、IoC操作两个部分<br>    1.1 IoC的配置文件方式<br>    1.2 IoC的注解方式<br>3、IoC底层原理需要用到的技术<br>    3.1 xml配置文件<br>    3.2 dom4j解析xml<br>    3.3 工厂设计模式<br>    3.4 反射<br>    3.5 实现原理（图）<br>    <img src="/2018/01/19/Spring的Ioc底层原理/ioc过程操作1.png"><br>    <img src="/2018/01/19/Spring的Ioc底层原理/2.png"><br>4、IoC入门案例<br>    4.1 导入jar包，我这里为大家备好了<a href="https://pan.baidu.com/s/1eTWRBDg几个基本jar包，直接复制即可。如下图：" target="_blank" rel="noopener">https://pan.baidu.com/s/1eTWRBDg几个基本jar包，直接复制即可。如下图：</a><br>    <img src="/2018/01/19/Spring的Ioc底层原理/3.png"><br>    <img src="/2018/01/19/Spring的Ioc底层原理/4.png"><br>    4.2 创建类，在类里面创建方法<br>    <img src="/2018/01/19/Spring的Ioc底层原理/7.png"><br>    4.3 创建spring配置文件<br>    在src下新建bean1.xml（spring中xml不固定，建议放在src下）,并引入约束，只使用其中一部分，具体看图:</p>
+<pre><code>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+    &lt;bean id=&quot;foo&quot; class=&quot;x.y.Foo&quot;&gt;
+         &lt;meta key=&quot;cacheName&quot; value=&quot;foo&quot;/&gt;
+         &lt;property name=&quot;name&quot; value=&quot;Rick&quot;/&gt;
+     &lt;/bean&gt;
+&lt;/beans&gt;
 
+如下图
+{% asset_img 5.jpg %}
+4.4 测试代码，如下图：
+{% asset_img 6.png %}
+到此，IoC入门案例就写好了。从图中控制台可以看出，类中的方法路径已经出现，方法也已经执行。
+</code></pre>
       
     </div>
     
@@ -307,7 +319,7 @@
         <p><span>本文标题:</span><a href="/2018/01/19/Spring的Ioc底层原理/">Spring的IoC底层原理</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Jack Yang</a></p>
         <p><span>发布时间:</span>2018-01-19, 19:57:02</p>
-        <p><span>最后更新:</span>2018-01-19, 23:02:42</p>
+        <p><span>最后更新:</span>2018-01-19, 23:05:50</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/19/Spring的Ioc底层原理/" title="Spring的IoC底层原理">http://yoursite.com/2018/01/19/Spring的Ioc底层原理/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/01/19/Spring的Ioc底层原理/　　作者: Jack Yang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
