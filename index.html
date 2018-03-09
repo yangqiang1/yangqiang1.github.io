@@ -180,7 +180,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring的IoC原理/">Spring的IoC原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo完美插入图片/">hexo完美插入图片</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS优先级/">CSS优先级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring的IoC原理/">Spring的IoC原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo完美插入图片/">hexo完美插入图片</a></li></ul>
                     </div>
                 </section>
                 
@@ -250,6 +250,84 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-CSS样式优先级了解一下" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/08/CSS样式优先级了解一下/" class="article-date">
+      <time datetime="2018-03-08T10:48:19.000Z" itemprop="datePublished">2018-03-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/08/CSS样式优先级了解一下/">CSS样式优先级了解一下</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <pre><code>当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。
+1.外部定义
+    定义一个class选择器，采用外部定义样式,代码如下
+    {% asset_img 1.png %}
+    效果为
+    {% asset_img 2.png %}
+2.内部定义
+    直接在标签内部定义样式
+    {% asset_img 3.png %}
+    效果为
+    {% asset_img 4.png %}
+3.外联式定义
+    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成
+    {% asset_img 5.png %}
+    效果
+    {% asset_img 6.png %}
+有的人可能有疑问，如果放在一起哪个优先级最高呢，我测试了一下，然后排了一个序，仅供参考：内部定义最高，外部次之，外联式垫底。
+    {% asset_img 7.png %}
+当然还有一种定义，就是在样式后面加！important例如&quot;background: red!important;&quot;，这样默认显示优先级最高，
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS优先级/">CSS优先级</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Spring的Ioc底层原理" class="article article-type-post" itemscope itemprop="blogPost">
   
