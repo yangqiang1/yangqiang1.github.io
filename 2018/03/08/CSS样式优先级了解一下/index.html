@@ -15,18 +15,26 @@
 
 
 
-<meta name="description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。 1.外部定义     定义一个class选择器，采用外部定义样式,代码如下     {% asset_img 1.png %}     效果为     {% asset_img 2.png %} 2.内部定义     直接在标签内部定义样式     {% asset_img 3.png %}     效果为     {">
+<meta name="description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。1.外部定义    定义一个class选择器，采用外部定义样式,代码如下        效果为    2.内部定义    直接在标签内部定义样式        效果为    3.外联式定义    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成        效果    有的人可能有疑问，如果放在一起">
 <meta name="keywords" content="CSS优先级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS样式优先级了解一下">
 <meta property="og:url" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/index.html">
 <meta property="og:site_name" content="Weclome">
-<meta property="og:description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。 1.外部定义     定义一个class选择器，采用外部定义样式,代码如下     {% asset_img 1.png %}     效果为     {% asset_img 2.png %} 2.内部定义     直接在标签内部定义样式     {% asset_img 3.png %}     效果为     {">
+<meta property="og:description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。1.外部定义    定义一个class选择器，采用外部定义样式,代码如下        效果为    2.内部定义    直接在标签内部定义样式        效果为    3.外联式定义    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成        效果    有的人可能有疑问，如果放在一起">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2018-03-09T09:22:14.117Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/3.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/4.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/5.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/6.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/7.png">
+<meta property="og:updated_time" content="2018-03-09T09:34:32.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS样式优先级了解一下">
-<meta name="twitter:description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。 1.外部定义     定义一个class选择器，采用外部定义样式,代码如下     {% asset_img 1.png %}     效果为     {% asset_img 2.png %} 2.内部定义     直接在标签内部定义样式     {% asset_img 3.png %}     效果为     {">
+<meta name="twitter:description" content="当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。1.外部定义    定义一个class选择器，采用外部定义样式,代码如下        效果为    2.内部定义    直接在标签内部定义样式        效果为    3.外联式定义    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成        效果    有的人可能有疑问，如果放在一起">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/08/CSS样式优先级了解一下/1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -286,26 +294,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <pre><code>当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。
-1.外部定义
-    定义一个class选择器，采用外部定义样式,代码如下
-    {% asset_img 1.png %}
-    效果为
-    {% asset_img 2.png %}
-2.内部定义
-    直接在标签内部定义样式
-    {% asset_img 3.png %}
-    效果为
-    {% asset_img 4.png %}
-3.外联式定义
-    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成
-    {% asset_img 5.png %}
-    效果
-    {% asset_img 6.png %}
-有的人可能有疑问，如果放在一起哪个优先级最高呢，我测试了一下，然后排了一个序，仅供参考：内部定义最高，外部次之，外联式垫底。
-    {% asset_img 7.png %}
-当然还有一种定义，就是在样式后面加！important例如&quot;background: red!important;&quot;，这样默认显示优先级最高，
-</code></pre>
+        <p>当初接触前端的时候，对样式定义的优先级总是搞混，今天呢，我在这里就做一个总结。<br>1.外部定义<br>    定义一个class选择器，采用外部定义样式,代码如下<br>    <img src="/2018/03/08/CSS样式优先级了解一下/1.png"><br>    效果为<br>    <img src="/2018/03/08/CSS样式优先级了解一下/2.png"><br>2.内部定义<br>    直接在标签内部定义样式<br>    <img src="/2018/03/08/CSS样式优先级了解一下/3.png"><br>    效果为<br>    <img src="/2018/03/08/CSS样式优先级了解一下/4.png"><br>3.外联式定义<br>    大多数人会直接定义一个css文件，然后所有的样式定义在css里面完成<br>    <img src="/2018/03/08/CSS样式优先级了解一下/5.png"><br>    效果<br>    <img src="/2018/03/08/CSS样式优先级了解一下/6.png"><br>有的人可能有疑问，如果放在一起哪个优先级最高呢，我测试了一下，然后排了一个序，仅供参考：内部定义最高，外部次之，外联式垫底。<br>    <img src="/2018/03/08/CSS样式优先级了解一下/7.png"><br>当然还有一种定义，就是在样式后面加！important例如”background: red!important;”，这样默认显示优先级最高，</p>
+
       
     </div>
     
@@ -316,7 +306,7 @@
         <p><span>本文标题:</span><a href="/2018/03/08/CSS样式优先级了解一下/">CSS样式优先级了解一下</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Jack Yang</a></p>
         <p><span>发布时间:</span>2018-03-08, 18:48:19</p>
-        <p><span>最后更新:</span>2018-03-09, 17:22:14</p>
+        <p><span>最后更新:</span>2018-03-09, 17:34:32</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/03/08/CSS样式优先级了解一下/" title="CSS样式优先级了解一下">http://yoursite.com/2018/03/08/CSS样式优先级了解一下/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/03/08/CSS样式优先级了解一下/　　作者: Jack Yang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
